@@ -1,0 +1,19 @@
+<!DOCTYPE html><html><head>
+  <title>Email Collection Form</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" /></head><body>
+  <h2>Enter your email</h2>
+  <form action="https://hook.eu1.make.com/c125avjwjeop34y949ax61d4yrajh6dz" method="POST">
+    <label for="email">Email:</label><br>
+    <input type="email" id="email" name="email" required /><br><br>
+
+    <!-- Hidden call_id passed via URL --><input type="hidden" id="call_id" name="call_id" />
+
+    <input type="submit" value="Submit" />
+  </form>
+
+  <script>// Extract call_id from URLconst urlParams = new URLSearchParams(window.location.search);
+    const callId = urlParams.get('call_id');
+    if (callId) {
+      document.getElementById('call_id').value = callId;
+    }
+  </script></body></html>
